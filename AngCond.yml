@@ -14,7 +14,7 @@ steps:
     customCommand: 'run build'
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.DefaultWorkingDirectory)/dist/angular-conduit'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist/angular-conduit'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
