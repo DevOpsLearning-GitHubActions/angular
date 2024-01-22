@@ -4,6 +4,22 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: Hi Harsha!
-  displayName: 'Name'
+stages:
+  - stage: stage1
+    jobs:
+      - job: job1
+        steps:
+          - task: CmdLine@2
+            inputs:
+              script: 'echo Hi Harsha'
+            displayName: Task1
+          - task: CmdLine@2
+            inputs:
+              script: 'echo Hi Sai'
+            displayName: Task2
+      - job: job2
+        steps:
+          - task: CmdLine@2
+            inputs:
+              script: 'echo Hi Hemanth'
+            displayName: Task3
