@@ -23,3 +23,11 @@ stages:
             inputs:
               script: 'echo Hi Hemanth'
             displayName: Task3
+  - stage: stage2
+    jobs:
+      - job: job3
+        steps:
+          - task: CmdLine@2
+            inputs:
+              script: 'echo Hi Giri'
+            displayName: Task4
